@@ -15,7 +15,9 @@
     "require-jsdoc": "off",
     "eol-last": "off",
     "no-unused-vars": "off",
-    "no-trailing-spaces": "off"
+    "no-trailing-spaces": "off",
+    "operator-linebreak": "off",
+    "no-debugger": "off"
   },
   "extends": [
     "eslint:recommended",

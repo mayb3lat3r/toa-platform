@@ -1,19 +1,19 @@
+import {$} from '@core/dom';
+
 export class Toa {
     constructor(selector, options) {
-        this.$el = document.querySelector(selector)
+        this.$el = $(selector)
         this.components = options.components || []
     }
 
     getRoot() {
-        const $root = document.createElement('div') // создаем дiv
-        $root.classList.add('toa')
+        const $root = $.create('div', 'toa')
 
         // бежим по всему массиву из компонент, отрисовывая их
         this.components.forEach(Component => {
-            const $el = document.createElement('div')
-            $el.classList.add(Component.className)
+            const $el = $.create('div', Component.className)
             const component = new Component($el)
-            $el.innerHTML = component.toHTML()
+            $el.html(component.toHTML())
             $root.append($el)
         })
         return $root

@@ -6,7 +6,6 @@ export class Header extends ToaComponent {
 
     toHTML() {
         return `
-            
             <div class="theme-picker">
                 <nav>
                     <div class="theme-picker__button" onclick="showThemePicker()">
@@ -49,12 +48,6 @@ export class Header extends ToaComponent {
                 </nav>
 
             </div>
-            
-            <div class="search">
-                <input type="text" class="search-theme" placeholder="Поиск темы"/>
-                <!--                <span class="material-icons">search</span>-->
-            </div>
-    
             <div class="user">
                 <div class="user__settings">
                     <span class="material-icons md-18">settings</span>

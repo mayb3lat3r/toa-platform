@@ -14,7 +14,8 @@
     "max-len": "off",
     "require-jsdoc": "off",
     "eol-last": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "no-trailing-spaces": "off"
   },
   "extends": [
     "eslint:recommended",

@@ -6,10 +6,15 @@ export class Toa {
 
     getRoot() {
         const $root = document.createElement('div') // создаем дiv
+        $root.classList.add('toa')
+
         // бежим по всему массиву из компонент, отрисовывая их
         this.components.forEach(Component => {
-            const component = new Component()
-            $root.insertAdjacentHTML('beforeend', component.toHTML())
+            const $el = document.createElement('div')
+            $el.classList.add(Component.className)
+            const component = new Component($el)
+            $el.innerHTML = component.toHTML()
+            $root.append($el)
         })
         return $root
     }
